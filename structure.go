@@ -39,7 +39,6 @@ func main() {
 		LastName:  "Doe",
 		Email:     "john.doe@example.com",
 	}
-
 	fmt.Println(user.FirstName)
 	user2 := User{}
 	fmt.Println(user2)
