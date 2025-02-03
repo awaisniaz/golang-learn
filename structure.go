@@ -32,22 +32,23 @@ type Group struct {
 	NumberOfPpl int    `json:"number_of_ppl"`
 }
 
-func main() {
-	user := User{
-		ID:        "1",
-		FirstName: "John",
-		LastName:  "Doe",
-		Email:     "john.doe@example.com",
-	}
-	fmt.Println(user.FirstName)
-	user2 := User{}
-	fmt.Println(user2)
-	fmt.Println(user.ID)
-	fmt.Println(&user)
-	fmt.Println(&user.ID)
-	var a Animal
-	fmt.Println(a)
-	a = Loin{age: 10}
-	a.breath()
-	a.walk()
-}
+// func main() {
+// 	Channel()
+// 	// user := User{
+// 	// 	ID:        "1",
+// 	// 	FirstName: "John",
+// 	// 	LastName:  "Doe",
+// 	// 	Email:     "john.doe@example.com",
+// 	// }
+// 	// fmt.Println(user.FirstName)
+// 	// user2 := User{}
+// 	// fmt.Println(user2)
+// 	// fmt.Println(user.ID)
+// 	// fmt.Println(&user)
+// 	// fmt.Println(&user.ID)
+// 	// var a Animal
+// 	// fmt.Println(a)
+// 	// a = Loin{age: 10}
+// 	// a.breath()
+// 	// a.walk()
+// }
