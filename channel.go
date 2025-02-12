@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"strconv"
+	"sync"
+	"time"
 )
 
 func Channel() {
@@ -25,8 +28,53 @@ func main() {
 
 	// All Datatype of the System
 
+	// Pointer in Golang
+
+	a := new(int)
+	*a = 10
+	fmt.Print(&a)
+
+	// Enum in Golang
+
+	type Size int
+
+	const (
+		small Size = iota
+		medium
+		large
+		extraLarge
+	)
+	fmt.Println(small)
+	fmt.Println(medium)
+	fmt.Println(large)
+	fmt.Println(extraLarge)
+
 }
 
+func goRoutineCheck() {
+	var wg sync.WaitGroup
+	wg.Add(3)
+	go sleep(&wg, time.Second*1)
+	go sleep(&wg, time.Second*2)
+	wg.Wait()
+	fmt.Println("All Goroutines finished")
+}
+
+func sleep(wg *sync.WaitGroup, duration time.Duration) {
+	defer wg.Done()
+	time.Sleep(duration)
+	fmt.Println("Finished Execution")
+}
+
+func checkTheString() {
+	x := "123"
+	_, err := strconv.Atoi(x)
+	if err != nil {
+		fmt.Printf("Supplied value is not a valid integer")
+	} else {
+		fmt.Println()
+	}
+}
 func parallism() {
 	fmt.Printf("I am Goroutine")
 }
