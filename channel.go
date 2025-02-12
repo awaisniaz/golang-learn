@@ -23,6 +23,8 @@ func main() {
 	go parallism()
 	fmt.Printf("I am End position")
 
+	// All Datatype of the System
+
 }
 
 func parallism() {
